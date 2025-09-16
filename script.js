@@ -2,10 +2,12 @@
 let file;
 let row;
 let output = document.getElementById("output");
-let btnRomaji = document.getElementById("btn-romaji");
-let btnKana = document.getElementById("btn-kana");
-let romaji = false;
-let kana = false;
+let btnEspanolARomaji = document.getElementById("btn-romaji");
+let btnRomajiAKana = document.getElementById("btn-kana");
+let btnKanaARomaji = document.getElementById("btn-kana-a-romaji");
+let espanolARomaji = false;
+let romajiAKana = false;
+let kanaARomaji = false;
 let tempLetra;
 let tempStr = "";
 let vocales = ["a","i","u","e","o"];
@@ -37,33 +39,53 @@ fetch(`../vocabulario_lista.txt`)
 
 function mostrarPregunta(){   
     inputRespuesta.value = "";
-    if(romaji || kana) {
-        let random = Math.floor(Math.random() * file.length);
-        row = file[random].split(" - "); 
+    let random = Math.floor(Math.random() * file.length);
+    row = file[random].split(" - "); 
+    if(espanolARomaji || romajiAKana) {
         document.getElementById("muestra").innerHTML = row[2];
+    }
+    if(kanaARomaji){
+        document.getElementById("muestra").innerHTML = row[0];
     }
     output.style.display = "none";
 }
 
-function preguntarRomaji(){
-    romaji = true;
-    btnRomaji.style.borderColor = "red";
-    kana = false;
-    btnKana.style.borderColor = "transparent";
+function preguntarEspañolARomaji(){
+    espanolARomaji = true;
+    kanaARomaji = false;
+    btnEspanolARomaji.style.borderColor = "red";
+    romajiAKana = false;
+    btnRomajiAKana.style.borderColor = "transparent";
+    btnKanaARomaji.style.borderColor = "transparent";
     mostrarPregunta()
 
 }
 
-function preguntarKana(){
-    romaji = false;
-    btnRomaji.style.borderColor = "transparent";
-    kana = true;
-    btnKana.style.borderColor = "red";
+function preguntarRomajiAKana(){
+    espanolARomaji = false;
+    kanaARomaji = false;
+    btnEspanolARomaji.style.borderColor = "transparent";
+    romajiAKana = true;
+    btnRomajiAKana.style.borderColor = "red";
+    btnKanaARomaji.style.borderColor = "transparent";
+    mostrarPregunta()
+}
+
+function preguntarKanaARomaji(){
+    espanolARomaji = false;
+    kanaARomaji = true;
+    btnKanaARomaji.style.borderColor = "red";
+    romajiAKana = false;
+    btnEspanolARomaji.style.borderColor = "transparent";
+    btnRomajiAKana.style.borderColor = "transparent";
     mostrarPregunta()
 }
 
 function responder(respuesta){
-    if(romaji){
+    if(output.innerHTML === "¡Correcto!" && output.style.display === "block"){
+        mostrarPregunta();
+    }else{
+        if(espanolARomaji || kanaARomaji){
         if(respuesta === row[1]){
             output.innerHTML = "¡Correcto!";
             output.style.borderColor = "lightgreen";
@@ -73,7 +95,7 @@ function responder(respuesta){
         }
         output.style.display = "block";        
     }
-    if(kana){
+    if(romajiAKana){
         if(respuesta === row[0]){
             output.innerHTML = "¡Correcto!";
             output.style.borderColor = "green";
@@ -83,6 +105,9 @@ function responder(respuesta){
         }
         output.style.display = "block";
     }
+    }
+    
+    
 }
 
 document.getElementById("form-respuesta")
@@ -95,7 +120,7 @@ document.getElementById("form-respuesta")
 function cambiaInput(){        
     let str = inputRespuesta.value;
 
-    if(kana){
+    if(romajiAKana){
         if(row[3].trim() === "hiragana"){
             traducir(str, hiraganaList);
         }
