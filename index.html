@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Kana Kaigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="bloque">
+        <button id="btn-romaji" class="btn btn-primary" onclick="preguntarRomaji()">Español a Romaji</button>
+        <button id="btn-kana" class="btn btn-primary" onclick="preguntarKana()">Español a Kana</button>
+
+        <form action="submit" id="form-respuesta" autocomplete="off">
+            <label id="muestra">Pregunta</label><br>
+            <input id="respuesta" onchange="cambiaInput()" onkeypress="this.onchange()" onpaste="this.onchange()" oninput="this.onchange()" type="text"><br>
+            <button type="submit" class="btn btn-secondary">Enviar</button>
+            <button type="button" class="btn btn-success" onclick="mostrarPregunta()">Next</button>
+        </form>
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
