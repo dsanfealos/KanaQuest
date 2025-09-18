@@ -212,3 +212,46 @@
 もくようび - mokuyoubi - jueves - hiragana
 げつようび - getsuyoubi - lunes - hiragana
 すいようび - suiyoubi - miércoles - hiragana
+ケーキ - keeki - pastel - katakana
+うた - uta - canción; poesía clásica japonesa, poema - hiragana
+とり - tori - pájaro, ave, corral - hiragana
+からい - karai - picante; salado; persona dura, adverso, desfavorable, áspero, cruel - hiragana
+シャツ - shatsu -  camisa - katakana
+あかい - akai -  rojo; comunista - hiragana
+ドレス - doresu - vestido - katakana
+スカート - sukaato - falda - katakana
+いたい - itai - doloroso, me duele - hiragana
+ところ - tokoro - lugar, escenario [lugar general e incluso metafórico], dirección, área, localidad- hiragana 
+わたし - watashi - yo - hiragana
+はなす - hanasu - hablar - hiragana
+あに - ani - hermano mayor - hiragana
+かす - kasu - prestar; alquilar - hiragana
+かう - kau - comprar - hiragana
+あう - au - conocerse, encontrarse con, tener un accidente/mala experiencia, afrontar - hiragana
+しゃちょう - shachou - presidente de la compañía, gerente, director - hiragana
+きく - kiku - oír, escuchar, preguntar - hiragana
+かく - kaku - escribir - hiragana
+かえる - kaeru - volver a casa, regresar, (un invitado, cliente, etc.) irse - hiragana
+とる - toru - coger, tomar, cosechar, ganar - hiragana
+あね - ane - hermana mayor - hiragana
+しぬ - shinu - morir - hiragana
+たつ - tatsu - estar/ponerse de pie; encontrarse en problemas, partir (en tren, avión, etc) - hiragana
+まつ - matsu - esperar en, esperar de, tener la esperanza puesta en, tener expectativas de, contar con - hiragana
+よぶ - yobu - llamar, vocear, llamar a gritos - hiragana
+あそぶ - asobu - jugar, hacer una visita; estar ocioso - hiragana
+いもうと - imouto - hermana menor - hiragana
+よむ - yomu - leer - hiragana
+のむ - nomu - beber, tragar, ingerir, fumar, devorar, aceptar (ej. Demanda, condición), ocultar - hiragana
+おとうと - otouto - hermano menor - hiragana
+およぐ - oyogu - nadar - hiragana
+いそぐ - isogu - apresurar, apurar - hiragana
+する - suru - hacer, intentar, ejecutar, jugar, practicar - hiragana
+くる - kuru - llegar, venir - hiragana
+しょくじする - shokujisuru - Comer, cenar - hiragana
+はたらく - hataraku - trabajar, funcionar, actuar, ser efectivo, cometer, perpetrar - hiragana
+うたう - utau - cantar - hiragana
+おしえる - oshieru - enseñar, informar, instruir - hiragana
+きょうしつ - kyoushitsu - aula, clase - hiragana
+べんきょうする - benkyousuru - estudiar - hiragana
+きょうかい - kyoukai - iglesia - hiragana
+けっこんする - kekkonsuru - casarse, contraer matrimonio - hiragana
