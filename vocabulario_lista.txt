@@ -145,7 +145,7 @@
 ただしい - tadashii - correcto, justo, derecho - hiragana
 がっこう - gakkou - escuela - hiragana
 こ - ko - hijo, hija, niño, niña, acciones nuevas (bolsa), huevo de ave - hiragana
-じょうず  - jouzu - habilidoso, competente, bueno (en), inteligente - hiragana
+じょうず - jouzu - habilidoso, competente, bueno (en), inteligente - hiragana
 え - e - pintura, dibujo, ilustración, cuadro, pintura - hiragana
 パスタ - pasuta - pasta (extranjerismo) - katakana
 よる - yoru - noche, cena - hiragana
@@ -221,7 +221,7 @@
 ドレス - doresu - vestido - katakana
 スカート - sukaato - falda - katakana
 いたい - itai - doloroso, me duele - hiragana
-ところ - tokoro - lugar, escenario [lugar general e incluso metafórico], dirección, área, localidad- hiragana 
+ところ - tokoro - lugar, escenario [lugar general e incluso metafórico], dirección, área, localidad - hiragana
 わたし - watashi - yo - hiragana
 はなす - hanasu - hablar - hiragana
 あに - ani - hermano mayor - hiragana

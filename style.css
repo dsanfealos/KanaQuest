@@ -1,6 +1,10 @@
 #bloque{
     text-align: center;
     margin-top: 10%;
+    border: black 2px solid;
+    padding: 20px;
+    width: 40%;
+    margin-left: 30%;
 }
 .btn{
     margin-bottom: 15px;

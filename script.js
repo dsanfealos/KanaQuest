@@ -1,30 +1,31 @@
 
-let file;
-let row;
+let file, row, hiraganaList, katakanaList;
+
 let output = document.getElementById("output");
 let btnEspanolARomaji = document.getElementById("btn-romaji");
 let btnRomajiAKana = document.getElementById("btn-kana");
 let btnKanaARomaji = document.getElementById("btn-kana-a-romaji");
+let inputRespuesta = document.getElementById("respuesta");
+
 let espanolARomaji = false;
 let romajiAKana = false;
 let kanaARomaji = false;
+
 let tempLetra;
 let tempStr = "";
+
 let vocales = ["a","i","u","e","o"];
 let aplh = ["b","c", "d", "f", "g", "h", "j", "k", "l", "m", "n"
     , "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
-let inputRespuesta = document.getElementById("respuesta");
 
 
 
-let hiraganaList;
 fetch(`../hiragana.txt`)
     .then(res => res.text())
     .then(silabarioHiragana => {
         hiraganaList = silabarioHiragana.split("\n");
     });
 
-let katakanaList;
 fetch(`../katakana.txt`)
     .then(res => res.text())
     .then(silabarioKatakana => {
@@ -86,25 +87,25 @@ function responder(respuesta){
         mostrarPregunta();
     }else{
         if(espanolARomaji || kanaARomaji){
-        if(respuesta === row[1]){
-            output.innerHTML = "¡Correcto!";
-            output.style.borderColor = "lightgreen";
-        }else{
-            output.innerHTML = "Incorrecto";
-            output.style.borderColor = "red";
+            if(respuesta === row[1]){
+                output.innerHTML = "¡Correcto!";
+                output.style.borderColor = "lightgreen";
+            }else{
+                output.innerHTML = "Incorrecto";
+                output.style.borderColor = "red";
+            }
+            output.style.display = "block";        
         }
-        output.style.display = "block";        
-    }
-    if(romajiAKana){
-        if(respuesta === row[0]){
-            output.innerHTML = "¡Correcto!";
-            output.style.borderColor = "green";
-        }else{
-            output.innerHTML = "Incorrecto";
-            output.style.borderColor = "red";
+        if(romajiAKana){
+            if(respuesta === row[0]){
+                output.innerHTML = "¡Correcto!";
+                output.style.borderColor = "green";
+            }else{
+                output.innerHTML = "Incorrecto";
+                output.style.borderColor = "red";
+            }
+            output.style.display = "block";
         }
-        output.style.display = "block";
-    }
     }
     
     
@@ -152,7 +153,7 @@ function traducir(str, list){
             if(preLastChar === "ん" || preLastChar === "ン"){
                 str = controlN(str, lastChar, preLastChar)
             }else{
-                if(antepenultimo === preLastChar){
+                if(antepenultimo === preLastChar && aplh.includes(antepenultimo)){
                     str = str = str.slice(0, -3) + tsuMini + preLastChar + lastChar;
                 }
                 for (let i = 0; i < list.length; i++) {

@@ -12,7 +12,9 @@
         <button id="btn-kana-a-romaji" class="btn btn-primary" onclick="preguntarKanaARomaji()">Kana a Romaji</button>
 
         <form action="submit" id="form-respuesta" autocomplete="off">
+            <label style="font-weight: bold;">Palabra a traducir: </label>
             <label id="muestra">Pregunta</label><br>
+            <label style="font-weight: bold;">Respuesta: </label>
             <input id="respuesta" onchange="cambiaInput()" onkeypress="this.onchange()" onpaste="this.onchange()" oninput="this.onchange()" type="text"><br>
             <button type="submit" class="btn btn-secondary">Enviar</button>
             <button type="button" class="btn btn-success" onclick="mostrarPregunta()">Next</button>
