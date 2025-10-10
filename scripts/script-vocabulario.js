@@ -1,5 +1,5 @@
 
-let file, row, hiraganaList, katakanaList;
+let fileVocabulario, rowVocabulario, hiraganaList, katakanaList;
 
 let output = document.getElementById("output");
 let btnEspanolARomaji = document.getElementById("btn-romaji");
@@ -20,65 +20,59 @@ let aplh = ["b","c", "d", "f", "g", "h", "j", "k", "l", "m", "n"
 
 
 
-fetch(`../hiragana.txt`)
+fetch(`../bbdd/silabario/hiragana.txt`)
     .then(res => res.text())
     .then(silabarioHiragana => {
         hiraganaList = silabarioHiragana.split("\n");
     });
 
-fetch(`../katakana.txt`)
+fetch(`../bbdd/silabario/katakana.txt`)
     .then(res => res.text())
     .then(silabarioKatakana => {
         katakanaList = silabarioKatakana.split("\n");
     });
 
-fetch(`../vocabulario_lista.txt`)
+fetch(`../bbdd/vocabulario/vocabulario_lista.txt`)
     .then(res => res.text())
     .then(text => {
-        file = text.split("\n");
+        fileVocabulario = text.split("\n");
     });
 
 function mostrarPregunta(){   
     inputRespuesta.value = "";
-    let random = Math.floor(Math.random() * file.length);
-    row = file[random].split(" - "); 
+    let random = Math.floor(Math.random() * fileVocabulario.length);
+    rowVocabulario = fileVocabulario[random].split(" - "); 
     if(espanolARomaji || romajiAKana) {
-        document.getElementById("muestra").innerHTML = row[2];
+        document.getElementById("muestra").innerHTML = rowVocabulario[2];
     }
     if(kanaARomaji){
-        document.getElementById("muestra").innerHTML = row[0];
+        document.getElementById("muestra").innerHTML = rowVocabulario[0];
     }
     output.style.display = "none";
 }
 
-function preguntarEspañolARomaji(){
+function preguntarEspañolARomaji(event){
     espanolARomaji = true;
     kanaARomaji = false;
-    btnEspanolARomaji.style.borderColor = "red";
     romajiAKana = false;
-    btnRomajiAKana.style.borderColor = "transparent";
-    btnKanaARomaji.style.borderColor = "transparent";
+    cambiaBordeBoton(event)
     mostrarPregunta()
 
 }
 
-function preguntarRomajiAKana(){
+function preguntarRomajiAKana(event){
     espanolARomaji = false;
     kanaARomaji = false;
-    btnEspanolARomaji.style.borderColor = "transparent";
     romajiAKana = true;
-    btnRomajiAKana.style.borderColor = "red";
-    btnKanaARomaji.style.borderColor = "transparent";
+    cambiaBordeBoton(event)
     mostrarPregunta()
 }
 
-function preguntarKanaARomaji(){
+function preguntarKanaARomaji(event){
     espanolARomaji = false;
     kanaARomaji = true;
-    btnKanaARomaji.style.borderColor = "red";
     romajiAKana = false;
-    btnEspanolARomaji.style.borderColor = "transparent";
-    btnRomajiAKana.style.borderColor = "transparent";
+    cambiaBordeBoton(event)
     mostrarPregunta()
 }
 
@@ -87,7 +81,7 @@ function responder(respuesta){
         mostrarPregunta();
     }else{
         if(espanolARomaji || kanaARomaji){
-            if(respuesta === row[1]){
+            if(respuesta === rowVocabulario[1]){
                 output.innerHTML = "¡Correcto!";
                 output.style.borderColor = "lightgreen";
             }else{
@@ -97,7 +91,7 @@ function responder(respuesta){
             output.style.display = "block";        
         }
         if(romajiAKana){
-            if(respuesta === row[0]){
+            if(respuesta === rowVocabulario[0]){
                 output.innerHTML = "¡Correcto!";
                 output.style.borderColor = "green";
             }else{
@@ -122,10 +116,10 @@ function cambiaInput(){
     let str = inputRespuesta.value;
 
     if(romajiAKana){
-        if(row[3].trim() === "hiragana"){
+        if(rowVocabulario[3].trim() === "hiragana"){
             traducir(str, hiraganaList);
         }
-        if(row[3].trim() === "katakana"){
+        if(rowVocabulario[3].trim() === "katakana"){
             traducir(str, katakanaList);
         }
     }
@@ -145,7 +139,7 @@ function traducir(str, list){
 
 
         if (lastChar === tempLetra && vocales.includes(lastChar) 
-            && !aplh.includes(preLastChar) && row[3].trim() === "katakana") {
+            && !aplh.includes(preLastChar) && rowVocabulario[3].trim() === "katakana") {
 
             str = str.slice(0, -1) + bonpu;
         }else{
