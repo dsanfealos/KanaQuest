@@ -49,7 +49,7 @@
 かいしゃ - kaisha - empresa, compañía, corporación - hiragana
 おかし - okashi - dulces, golosinas - hiragana
 やさしい - yasashii - tierno, bueno, gentil - hiragana
-はは - haha - madre (informal)- hiragana
+はは - haha - madre (informal) - hiragana
 うつくしい - utsukushii - hermoso, bello - hiragana
 ひと - hito - persona, personas - hiragana
 コーヒー - koohii - café (anglicismo) - katakana
@@ -157,7 +157,7 @@
 こども - kodomo - niño, niños - hiragana
 すき - suki - gustar, gustado - hiragana
 はな - hana - flor, flor, pétalo - hiragana
-さかな - sakana - pez, pez, pescado - hiragana
+さかな - sakana - pez, pescado - hiragana
 ネクタイ - nekutai - corbata (extranjerismo) - katakana
 きらい - kirai - disgusto, odio, sospecha, tendencia, indicio - hiragana
 カラオケ - karaoke - karaoke (cantar música grabada) - katakana
@@ -188,7 +188,7 @@
 おねえさん - oneechan - hermana mayor, (vocativo) jovencita, señora , madre (usado por las geishas para referirse a sus superioras) - hiragana
 ばんごはん - bangohan - cena - hiragana
 すきやき - sukiyaki - guiso tradicional a base de carne y verduras - hiragana
-ですか - desuka - Indica pregunta - hiragana
+ですか - desuka - Al final de las frases, indica pregunta - hiragana
 ジャケット - jaketto - chaqueta (extranjerismo), cubierta de libro, carátula de CD - katakana
 くろい - kuroi - negro, oscuro - hiragana
 いろ - iro - color, sensualidad, lujuria - hiragana
@@ -200,7 +200,7 @@
 ばしょ - basho - lugar, ubicación - hiragana
 ゆうびんきょく - yuubinkyoku - oficina postal, oficina de correos - hiragana
 おおきな - ookina - grande, gran, largo - hiragana
-ケーキや - keekiya - Pastelería - hiragana
+ケーキや - keekiya - pastelería - hiragana
 どこ - goto - dónde, en qué lugar - hiragana
 おとうさん - otousan - padre - hiragana
 だれ - dare - quién - hiragana
@@ -255,3 +255,88 @@
 べんきょうする - benkyousuru - estudiar - hiragana
 きょうかい - kyoukai - iglesia - hiragana
 けっこんする - kekkonsuru - casarse, contraer matrimonio - hiragana
+たいいくかん - taiikukan - gimnasio - hiragana
+れんしゅうする - ranshuusuru - practicar - hiragana
+ぎんこう - ginkou - banco - hiragana
+つとめる - tsutomeru - desempeñar, ejercer, hacerse cargo de, trabajar, servir, estar empleado - hiragana
+レストラン - resutoran - restaurante - katakana
+たべる - taberu - comer - hiragana
+きっさてん - kissaten - cafetería - hiragana
+どうぶつえん - doubutsuen - zoológico - hiragana
+かれら - karera - ellos - hiragana
+プール - puuru - piscina - katakana
+ごじ - goji - Cinco en punto (hora) - hiragana
+おきる - okiru - levantarse, despertarse; suceder, tener lugar - hiragana
+はちじ - hachiji - Ocho en punto (hora) - hiragana
+ねる - neru - acostarse, dormir - hiragana
+しちじ - shichiji - 7 en punto (hora) - hiragana
+でかける - dekakeru - partir, salir fuera, ponerse en marcha - hiragana
+じゅうにじ - juuniji - doce en punto (hora) - hiragana
+つく - tsuku - llegar a, alcanzar; formar parte de, sentarse a - hiragana
+じゅういちじ - juuichiji - once en punto - hiragana
+こどもたち - kodomotachi - niños (grupo) - hiragana
+ろくじ - rokuji - 6 en punto (hora) - hiragana
+おなかがすく - onakagasuku - tener hambre - hiragana
+しがつ - shigatsu - abril - hiragana
+はじまる - hajimaru - comenzar - hiragana
+としょかん - toshokan - biblioteca - hiragana
+ひらく - hiraku - abrirse, quedarse abierto, quedarse vacío - hiragana
+じゅうにがつ - juunigatsu - diciembre - hiragana
+しちがつ - shichigatsu - julio - hiragana
+おくる  - okuru - enviar (cosas), despachar, escoltar, acompañar, despedirse - hiragana
+コンサート - konsaato - concierto - katakana
+ふく - fuku - ropa (esp. ropa occidental); contador para dosis (medicina, tragos, caladas...) - hiragana
+つくる - tsukuru - hacer, crear, fabricar, manufacturar, etc... - hiragana
+うる - uru - vender - hiragana
+まんねんひつ - mannenhitsu - pluma estilográfica - hiragana
+つかう - tsukau - despachar, enviar, donar, usar, manipular, emplear, necesitar, querer... - hiragana
+さしみ - sashimi - Sashimi (Pescado cortado en rajas) - hiragana
+ダンス - dansu - danza - hiragana
+おどる - odoru -bailar, danzar; saltar - hiragana
+いけばな - Ikebana - Ikebana (arte de arreglo floral) - hiragana
+ノート - nooto - libreta, cuaderno - katakana
+みせる - miseru - mostrar - hiragana
+おさら - osara - plato, platillo - hiragana
+あらう - arau - lavar - hiragana
+しゃしん - shashin - fotografía - hiragana
+とる - toru - grabar (vídeo, audio, etc.), tomar (foto), hacer (película) - hiragana
+そふ - sofu - abuelo (propio) - hiragana
+タバコ - tabako - tabaco, cigarrillos, puros; planta de tabaco - katakana
+すう - suu - fumar, aspirar, inhalar; chupar, sorber; absorber, embeber; besar - hiragana
+しんぶん - sinbun - periódico - hiragana
+アパート - apaato - apartamento, bloque de apartamentos - katakana
+かりる - kariru - tomar prestado, rentar, alquilar - hiragana
+きる - kiru - vestir, ponerse, llevar puesto; cargar con (culpa, etc.) - hiragana
+そぼ - sobo - abuela - hiragana
+アメリカ - amerika - América - katakana
+くうこう - kuukou - aeropuerto - hiragana
+いく - iku - ir, moverse (hacia), dirigirse (hacia); atravesar, pasar por - hiragana
+がいこく - gaikoku - país extranjero - hiragana
+おんせん - onsen - aguas termales, balneario, spa - hiragana
+けっこんしき - kekkonshiki - ceremonia de matrimonio, boda - hiragana
+たいしかん - taishikan - embajada - hiragana
+デパート - depaato - centro comercial, grandes almacenes - hiragana
+かぞく - kazoku - familia, familiares - hiragana
+イギリス - igirisu - Gran Bretaña, Reino Unido - hiragana
+りょかん - ryokan - hostal (estilo japonés) - hiragana
+ホテル - hoteru - hotel - hiragana
+いなか - inaka - rural, el campo, suburbio; ciudad de origen o residencia - hiragana
+やすむ - yasumu - descansar, tener un respiro, tomarse el día - hiragana
+すわる - suwaru - sentarse, ponerse en cuclillas; asumir posición - hiragana
+せいと - seito - alumno (generalmente de primaria/instituto) - hiragana
+フランスご - furansugo -  francés (idioma) - hiragana
+ようふく - youfuku - ropa estilo occidental - hiragana
+クラブ - kurabu - club, sede de un club - hiragana
+てつだう - tetsudau - ayudar, tomar parte en - hiragana
+あるく - aruku - caminar - hiragana
+たまご - tamago - huevo; experto en preparación, futuro experto - hiragana
+やま - yama - montaña; montón; climax - hiragana
+あさ - asa - mañana (momento del día); desayuno - hiragana
+でんしゃ - densha - tren eléctrico - hiragana
+のる - noru - subirse, entrar (a vehículo); extender (pantalones) - hiragana
+ひこうき - hikouki - avión - hiragana
+わらう - warau - reír, sonreír; burlarse de - hiragana
+チョコレート - chokoreeto - chocolate - hiragana
+やさい - yasau - verdura - hiragana
+サッカー - sakkaa - fútbol - katakana
+ぎゅうにゅう - gyuunyuu - leche de vaca - hiragana

@@ -1,5 +1,5 @@
 let opciones = ["posesivos", "adjetivos", "verbos",
-     "particulas", "pasado", "invitaciones", "aleatorio"];
+     "particulas", "pasado", "invitaciones", "preguntas", "aleatorio"];
 let subOpciones = [
     "presente", "especiales", "pasado", "existencia","parte 1", 
     "parte 2", "parte 3", "afirmaciones", "adjetivos", 
@@ -35,6 +35,7 @@ let particula1, particula2, particula3;
 let pasadoAfirmacion, pasadoAdjetivo;
 
 let invitacionesList;
+let preguntasList;
 
 function cambiaInputGramatica(){
 
@@ -58,7 +59,7 @@ function escogerTemario(){
 
     if(opcionGramatica === opciones[opciones.length-1]){
         //Aleatorio todo
-        return adjCompleto.concat(verbCompleto, partCompleto, pasCompleto);
+        return adjCompleto.concat(verbCompleto, partCompleto, pasCompleto, invitacionesList, posesivosList, preguntasList);
     }
 
     switch(opcionGramatica){
@@ -148,8 +149,11 @@ function escogerTemario(){
             break;
         case opciones[5]:
             //Invitaciones
-            gramaticList = invitacionesList
+            gramaticList = invitacionesList;
             break;
+        case opciones[6]:
+            //Preguntas 
+            gramaticList = preguntasList;
         default:
             console.error(`La opción no está disponible.`);
             break;
