@@ -51,6 +51,18 @@ function mostrarPregunta(){
     output.style.display = "none";
 }
 
+function mostrarRespuestaVocabulario(){
+    if(espanolARomaji || kanaARomaji){
+        output.innerHTML = rowVocabulario[1];
+        output.style.borderColor = "red";        
+    }
+    if(romajiAKana){
+        output.innerHTML = rowVocabulario[0];
+        output.style.borderColor = "red";
+    }
+    output.style.display = "block";
+}
+
 function preguntarEspañolARomaji(event){
     espanolARomaji = true;
     kanaARomaji = false;

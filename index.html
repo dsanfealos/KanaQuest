@@ -16,8 +16,9 @@
             <label id="muestra">Pregunta</label><br>
             <label style="font-weight: bold;">Respuesta: </label>
             <input id="respuesta" onchange="cambiaInput()" onkeypress="this.onchange()" onpaste="this.onchange()" oninput="this.onchange()" type="text"><br>
-            <button type="submit" class="btn btn-secondary">Enviar</button>
+            <button type="submit" class="btn btn-pink">Enviar</button>
             <button type="button" class="btn btn-success" onclick="mostrarPregunta()">Next</button>
+            <button type="button" class="btn btn-warning" onclick="mostrarRespuestaVocabulario()">Mostrar Respuesta</button>
         </form>
         <div id="output-vocabulario" class="output"></div>
     </div>
@@ -87,8 +88,9 @@
             <label id="muestra-gramatica">Pregunta</label><br>
             <label style="font-weight: bold;">Respuesta: </label>
             <input id="respuesta-gramatica" type="text"><br>
-            <button type="submit" class="btn btn-secondary">Enviar</button>
+            <button type="submit" class="btn btn-pink">Enviar</button>
             <button type="button" class="btn btn-success" onclick="mostrarPreguntaGramatica()">Next</button>
+            <button type="button" class="btn btn-warning" onclick="mostrarRespuestaGramatica()">Mostrar Respuesta</button>
             <div id="output-gramatica" class="output"></div>
         </form>
     </div>

@@ -13,6 +13,16 @@
     margin-bottom: 15px;
     border-width: 2px;
 }
+.btn-pink{
+    background: #f1356d;
+    color: #fff;
+}
+.btn-pink:hover{
+    color: #f1356d;
+    border: #f1356d solid 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
 input{
     margin: 10px;
 }

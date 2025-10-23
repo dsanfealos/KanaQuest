@@ -22,6 +22,13 @@ function mostrarPreguntaGramatica(){
         rowGramatica = gramaticList[random].split(" - ");
         document.getElementById("muestra-gramatica").innerHTML = rowGramatica[0];
     }
+    outputGramatica.style.display = "none";
+}
+
+function mostrarRespuestaGramatica(){
+    outputGramatica.style.display = "block";
+    outputGramatica.innerHTML = rowGramatica[1];
+    outputGramatica.style.borderColor = "red";
 }
 
 function responderGramatica(respuesta){
