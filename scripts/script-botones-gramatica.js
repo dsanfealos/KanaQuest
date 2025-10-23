@@ -15,6 +15,13 @@ function elegirOpcion(event){
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g,"");
     ocultarTodo();
+    if (opcionGramatica === "posesivos" ||
+        opcionGramatica === "invitaciones" ||
+        opcionGramatica === "preguntas" ||
+        opcionGramatica === "aleatorio"
+        ){
+        mostrarPreguntaGramatica();
+    }
     cambiaBordeBoton(event)
     let elementos = document.getElementsByClassName(`${opcionGramatica}`);
     for (let i = 0; i < elementos.length; i++){

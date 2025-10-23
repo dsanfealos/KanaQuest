@@ -1,7 +1,7 @@
 
 let fileVocabulario, rowVocabulario, hiraganaList, katakanaList;
 
-let output = document.getElementById("output");
+let output = document.getElementById("output-vocabulario");
 let btnEspanolARomaji = document.getElementById("btn-romaji");
 let btnRomajiAKana = document.getElementById("btn-kana");
 let btnKanaARomaji = document.getElementById("btn-kana-a-romaji");
@@ -41,7 +41,7 @@ fetch(`../bbdd/vocabulario/vocabulario_lista.txt`)
 function mostrarPregunta(){   
     inputRespuesta.value = "";
     let random = Math.floor(Math.random() * fileVocabulario.length);
-    rowVocabulario = fileVocabulario[random].split(" - "); 
+    rowVocabulario = fileVocabulario[random].split(" - ").trim(); 
     if(espanolARomaji || romajiAKana) {
         document.getElementById("muestra").innerHTML = rowVocabulario[2];
     }
@@ -81,7 +81,7 @@ function responder(respuesta){
         mostrarPregunta();
     }else{
         if(espanolARomaji || kanaARomaji){
-            if(respuesta === rowVocabulario[1]){
+            if(respuesta === rowVocabulario[1].trim()){
                 output.innerHTML = "¡Correcto!";
                 output.style.borderColor = "lightgreen";
             }else{
@@ -91,7 +91,7 @@ function responder(respuesta){
             output.style.display = "block";        
         }
         if(romajiAKana){
-            if(respuesta === rowVocabulario[0]){
+            if(respuesta === rowVocabulario[0].trim()){
                 output.innerHTML = "¡Correcto!";
                 output.style.borderColor = "green";
             }else{

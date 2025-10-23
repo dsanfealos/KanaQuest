@@ -19,19 +19,19 @@
             <button type="submit" class="btn btn-secondary">Enviar</button>
             <button type="button" class="btn btn-success" onclick="mostrarPregunta()">Next</button>
         </form>
-        <div id="output"></div>
+        <div id="output-vocabulario" class="output"></div>
     </div>
 
     <div class="bloque gramatica">
         <div>
-            <button class="btn btn-primary" onclick="elegirOpcion(event)">Posesivos</button>
+            <button class="btn btn-primary no-sub-option" onclick="elegirOpcion(event)">Posesivos</button>
             <button class="btn btn-primary" onclick="elegirOpcion(event)">Adjetivos</button>
             <button class="btn btn-primary" onclick="elegirOpcion(event)">Verbos</button>
             <button class="btn btn-primary" onclick="elegirOpcion(event)">Partículas</button>
             <button class="btn btn-primary" onclick="elegirOpcion(event)">Pasado</button>
-            <button class="btn btn-primary" onclick="elegirOpcion(event)">Invitaciones</button>
-            <button class="btn btn-primary" onclick="elegirOpcion(event)">Preguntas</button>
-            <button class="btn btn-primary" onclick="elegirOpcion(event)">Aleatorio</button>
+            <button class="btn btn-primary no-sub-option" onclick="elegirOpcion(event)">Invitaciones</button>
+            <button class="btn btn-primary no-sub-option" onclick="elegirOpcion(event)">Preguntas</button>
+            <button class="btn btn-primary no-sub-option" onclick="elegirOpcion(event)">Aleatorio</button>
             <br>
             <button class="btn btn-secondary oculto adjetivos" onclick="elegirSubOpcion(event)">Presente</button>
             <button class="btn btn-secondary oculto adjetivos" onclick="elegirSubOpcion(event)">Especiales</button>
@@ -82,15 +82,18 @@
         </div>
 
         <form action="submit" id="form-gramatica" autocomplete="off">
+            <label style="color: rgb(255, 98, 0);">Inicia cada respuesta con la primera letra mayúscula. No hay signos de exclamación ni de interrogación.</label>
             <label style="font-weight: bold;">Frase a traducir: </label>
             <label id="muestra-gramatica">Pregunta</label><br>
             <label style="font-weight: bold;">Respuesta: </label>
-            <input id="respuesta-gramatica" onchange="cambiaInputGramatica()" onkeypress="this.onchange()" onpaste="this.onchange()" oninput="this.onchange()" type="text"><br>
+            <input id="respuesta-gramatica" type="text"><br>
             <button type="submit" class="btn btn-secondary">Enviar</button>
             <button type="button" class="btn btn-success" onclick="mostrarPreguntaGramatica()">Next</button>
+            <div id="output-gramatica" class="output"></div>
         </form>
     </div>
 
+    <script src="scripts/script-cargar-bbdd.js"></script>
     <script src="scripts/script-vocabulario.js"></script>
     <script src="scripts/script-botones-gramatica.js"></script>
     <script src="scripts/script-gramatica.js"></script>

@@ -8,40 +8,14 @@ let subOpciones = [
 
 let opcionGramatica = "";
 let subOpcionGramatica = "";
-
-
-
+let outputGramatica = document.getElementById("output-gramatica");
+let inputRespuestaGramatica = document.getElementById("respuesta-gramatica");
 
 let rowGramatica, gramaticList;
 
-let posesivosList;
-
-let adjetivoPresente, adjetivoEspecial;
-fetch(`../bbdd/gramatica/adjetivos/adjetivos-presente.txt`)
-    .then(res=>res.text())
-    .then(data => {
-        adjetivoPresente = data.split("\n");
-    })
-fetch(`../bbdd/gramatica/adjetivos/adjetivos-especiales.txt`)
-    .then(res=>res.text())
-    .then(data => {
-        adjetivoEspecial = data.split("\n");
-    })
-
-let verboPresente, verboExistencia, verboPasado;
-
-let particula1, particula2, particula3;
-
-let pasadoAfirmacion, pasadoAdjetivo;
-
-let invitacionesList;
-let preguntasList;
-
-function cambiaInputGramatica(){
-
-}
 
 function mostrarPreguntaGramatica(){
+    inputRespuestaGramatica.value = "";
     gramaticList = escogerTemario();
     let random = Math.floor(Math.random() * gramaticList.length);
     if(gramaticList.length != 0){
@@ -50,12 +24,34 @@ function mostrarPreguntaGramatica(){
     }
 }
 
+function responderGramatica(respuesta){
+    if(outputGramatica.innerHTML === "¡Correcto!" && outputGramatica.style.display === "block"){
+        mostrarPreguntaGramatica();
+    }else{
+        if(respuesta === rowGramatica[1].trim()){
+            outputGramatica.innerHTML = "¡Correcto!";
+            outputGramatica.style.borderColor = "lightgreen";
+        }else{
+            outputGramatica.innerHTML = "Incorrecto";
+            outputGramatica.style.borderColor = "red";
+        }
+        outputGramatica.style.display = "block";
+    }
+}
+
+document.getElementById("form-gramatica")
+    .addEventListener("submit", (event) =>{
+        event.preventDefault();
+        let respuesta = inputRespuestaGramatica.value; 
+        responderGramatica(respuesta);        
+    });
+
 function escogerTemario(){
     let gramaticaBBDD = [];
     let adjCompleto = adjetivoPresente.concat(adjetivoEspecial);
-    /*let verbCompleto = verboPresente.concat(verboExistencia, verboPasado);
+    let verbCompleto = verboPresente.concat(verboExistencia, verboPasado);
     let partCompleto = particula1.concat(particula2, particula3);
-    let pasCompleto = pasadoAfirmacion.concat(pasadoAdjetivo);*/
+    let pasCompleto = pasadoAfirmacion.concat(pasadoAdjetivo);
 
     if(opcionGramatica === opciones[opciones.length-1]){
         //Aleatorio todo
@@ -65,7 +61,7 @@ function escogerTemario(){
     switch(opcionGramatica){
         case opciones[0]:
             //Posesivos
-            gramaticList = posesivosList;
+            gramaticaBBDD = posesivosList;
             break;
         case opciones[1]:
             //Adjetivos
@@ -96,12 +92,15 @@ function escogerTemario(){
             switch(subOpcionGramatica){
                 case subOpciones[0]:
                     //Ver. Presente
+                    gramaticaBBDD = verboPresente;
                     break;
                 case subOpciones[2]:
                     //Ver. Pasado
+                    gramaticaBBDD = verboPasado;
                     break;
                 case subOpciones[3]:
                     //Ver. Existencia
+                    gramaticaBBDD = verboExistencia;
                     break;
                 default:
                     console.error(`La opción no se encuentra en ${opcionGramatica}.`);
@@ -117,12 +116,15 @@ function escogerTemario(){
             switch(subOpcionGramatica){
                 case subOpciones[4]:
                     //Part. 1
+                    gramaticaBBDD = particula1;
                     break;
                 case subOpciones[5]:
                     //Part. 2
+                    gramaticaBBDD = particula2;
                     break;
                 case subOpciones[6]:
                     //Part. 3
+                    gramaticaBBDD = particula3;
                     break;
                 default:
                     console.error(`La opción no se encuentra en ${opcionGramatica}.`);
@@ -138,9 +140,11 @@ function escogerTemario(){
             switch(subOpcionGramatica){
                 case subOpciones[7]:
                     //Pas. Afirmaciones
+                    gramaticaBBDD = pasadoAfirmacion;
                     break;
                 case subOpciones[8]:
                     //Pas. Adjetivos
+                    gramaticaBBDD = pasadoAdjetivo;
                     break;
                 default:
                     console.error(`La opción no se encuentra en ${opcionGramatica}.`);
@@ -149,11 +153,12 @@ function escogerTemario(){
             break;
         case opciones[5]:
             //Invitaciones
-            gramaticList = invitacionesList;
+            gramaticaBBDD = invitacionesList;
             break;
         case opciones[6]:
             //Preguntas 
-            gramaticList = preguntasList;
+            gramaticaBBDD = preguntasList;
+            break;
         default:
             console.error(`La opción no está disponible.`);
             break;

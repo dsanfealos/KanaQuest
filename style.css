@@ -16,7 +16,7 @@
 input{
     margin: 10px;
 }
-#output{
+.output{
     border: 2px red solid;
     padding: 10px;
     width: 30%;
