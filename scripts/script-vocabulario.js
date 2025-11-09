@@ -41,7 +41,7 @@ fetch(`../bbdd/vocabulario/vocabulario_lista.txt`)
 function mostrarPregunta(){   
     inputRespuesta.value = "";
     let random = Math.floor(Math.random() * fileVocabulario.length);
-    rowVocabulario = fileVocabulario[random].split(" - ").trim(); 
+    rowVocabulario = fileVocabulario[random].split(" - "); 
     if(espanolARomaji || romajiAKana) {
         document.getElementById("muestra").innerHTML = rowVocabulario[2];
     }
